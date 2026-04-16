@@ -500,7 +500,7 @@ input:focus {
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--text-color);
     width: 280px;
-    height: 230px;
+    height: 250px;
     border-radius: 25px;
     align-items: center;
     text-align: center;
@@ -511,6 +511,8 @@ input:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px 15px;
+    overflow: hidden;
 }
 
 .card1:hover {
@@ -524,8 +526,10 @@ input:focus {
 
 .card1 p,
 .card1 h3 {
-    margin: 0;
+    margin: 5px 0;
     color: #333;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .card1:hover h3,
@@ -556,26 +560,31 @@ input:focus {
 }
 
 #donate {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #555;
     margin-top: 8px;
-    margin-bottom: 0%;
+    margin-bottom: 5px;
 }
 
 .card1 h3 {
     position: relative;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.55rem;
+    font-size: 1.4rem;
     margin-bottom: 10px;
+    line-height: 1.3;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 .card1 p a{
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: crimson;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .rightitems {
@@ -738,22 +747,28 @@ input:focus {
 
 .events-text h1 {
     margin: 0 0 10px;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #b22222;
+    line-height: 1.3;
+    word-wrap: break-word;
 }
 
 .events-text h2 {
     margin: 0 0 10px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #e63946;
+    line-height: 1.4;
+    word-wrap: break-word;
 }
 
 .events-text p,
 .events-text1 p {
     margin: 0;
     color: #444;
-    line-height: 1.5;
+    line-height: 1.6;
     margin-bottom: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .events-text1 h6 {
@@ -765,7 +780,9 @@ input:focus {
 .events-text1 h4 {
     margin: 5px 0;
     color: #2f3e46;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    line-height: 1.3;
+    word-wrap: break-word;
 }
 
 .events-icon-wrapper {
@@ -1015,18 +1032,20 @@ input:focus {
     display: flex;
     justify-content: start;
     align-content: center;
+    flex-wrap: wrap;
     gap: 1em;
-    height: 100%;
+    height: auto;
     width: 100%;
-    border-radius: 10%;
-
+    padding: 10px 0;
 }
 
 .text1 p {
     font-size: 0.9rem;
     margin-bottom: 30px;
-    line-height: 1.4;
+    line-height: 1.5;
     margin-right: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /*************************************/
@@ -1127,8 +1146,8 @@ input:focus {
 .cards3 {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 1em;
+    align-items: stretch;
+    gap: 1.5em;
     width: 100%;
     margin-top: 50px;
     padding-left: 20px;
@@ -1136,7 +1155,8 @@ input:focus {
 }
 
 .leftcard1 {
-    height: 550px;
+    height: auto;
+    min-height: 550px;
     width: 100%;
     overflow: hidden;
     margin: 0;
@@ -1147,6 +1167,8 @@ input:focus {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     border-radius: 25px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .leftcard1:hover {
@@ -1155,9 +1177,10 @@ input:focus {
 }
 
 .leftcard1 img {
-    object-fit: fill;
-    border-image: fill;
-    min-width: fit-content;
+    object-fit: cover;
+    width: 100%;
+    height: 260px;
+    border-radius: 25px 25px 0 0;
 }
 
 
@@ -2338,4 +2361,56 @@ html {
 .dark-mode .bar,
 .dark-mode .cont1 {
     background-color: var(--primary-background) !important;
+}
+
+/* News Cards Text Fixes */
+.Location {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 120px;
+}
+
+.Location h6 {
+    margin-bottom: 2px;
+    margin-left: 5px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.Location p {
+    margin-bottom: 10px;
+    margin-left: 5px;
+    font-size: 0.9rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.padding {
+    padding: 15px 20px !important;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.leftcard1 .text h1 {
+    font-size: 1.1rem !important;
+    margin-bottom: 10px !important;
+    line-height: 1.3;
+    word-wrap: break-word;
+}
+
+.leftcard1 .text h2 {
+    font-size: 1.3rem !important;
+    margin-bottom: 12px !important;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.leftcard1 .text p {
+    font-size: 0.95rem !important;
+    line-height: 1.6;
+    margin-bottom: 15px !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
